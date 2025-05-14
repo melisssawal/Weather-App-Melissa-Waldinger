@@ -1,0 +1,104 @@
+body {
+    background: linear-gradient(182deg, rgb(176, 197, 232) 0%, rgb(82, 99, 128) 100%);
+    font-family: "quicksand", sans-serif;
+}
+
+a {
+    color: #885df1;
+}
+
+.weather-app {
+    background: white;
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+}
+
+header {
+    border-bottom: 1px solid #f9f7fe;
+    padding-bottom: 30px;
+}
+
+.search-input {
+    background-color: rgb(224, 232, 240, 0.4);
+    border: none;
+    color: rgb(51, 62, 80, 0.5);
+    font-size: 16px;
+    padding: 20px;
+    width: 83%;
+    border-radius: 6px;
+    font-family: "quicksand";
+}
+
+.search-button {
+    margin-left: 5px;
+    font-size: 16px;
+    background-color: rgb(51, 62, 80);
+    color: white;
+    border: none;
+    padding: 20px;
+    line-height: 1;
+    border-radius: 10px;
+    font-family: "quicksand";
+}
+
+main {
+    padding: 30px 0;
+}
+
+.current-temperature {
+    font-size: 48px;
+}
+
+.current-weather {
+    display: flex;
+    justify-content: space-between;
+}
+
+.current-city {
+    font-size: 38px;
+    font-weight: 900;
+    margin: 0;
+    font-family: "lexend";
+}
+
+.current-details {
+    color: rgba(39, 33, 66, 0.4);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.current-details strong {
+    color: #333861;
+}
+
+.current-temperature-icon {
+    position: relative;
+    top: -8px;
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+.current-temperature-value {
+    font-size: 80px;
+    font-weight: bold;
+    font-family: "lexend";
+}
+
+.current-temperature-unit {
+    font-size: 28px;
+    position: relative;
+    top: -38px;
+    font-family: "lexend";
+}
+
+footer {
+    border-top: 1px solid #f9f7fe;
+    text-align: center;
+    padding-top: 15px;
+font-size: 14px;
+    color: rgba(39, 33, 66, 0.4);
+}
