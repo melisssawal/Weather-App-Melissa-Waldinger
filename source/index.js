@@ -15,7 +15,7 @@
     focusTempDescription.innerHTML = `${description}`;
     focusHumidity.innerHTML = `${response.data.temperature.humidity}%`;
     focusWindSpeed.innerHTML = `${response.data.wind.speed}km/h`;
-    focusIcon.innerHTML = `<img src="${response.data.condition.icon_url} />`;
+    focusIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class ="current-temperature-icon" />`;
    
     }
     

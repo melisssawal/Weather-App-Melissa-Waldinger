@@ -1,11 +1,11 @@
 body {
-    background: linear-gradient(182deg, rgb(176, 197, 232) 0%, rgb(82, 99, 128) 100%);
+    background: linear-gradient(to top, #3b41c5 0%, #a981bb 49%, #ffc8a9 100%);
     background-attachment: fixed;
     font-family: "quicksand", sans-serif;
 }
 
 a {
-    color: rgb(93, 29, 105);
+    color: #3b41c5;
 }
 
 .weather-app {
@@ -36,7 +36,7 @@ header {
 .search-button {
     margin-left: 5px;
     font-size: 16px;
-    background-color: rgb(51, 62, 80);
+    background-color: #3b41c5;
     color: white;
     border: none;
     padding: 20px;
@@ -50,12 +50,12 @@ main {
 }
 
 #humidity-value {
-    color: rgb(93, 29, 105);
+    color: #8d6c9c;
     font-weight: 700;
 }
 
 #windspeed-value {
-    color: rgb(93, 29, 105);
+    color: #8d6c9c;
     font-weight: 700;
 
 }
@@ -88,15 +88,15 @@ main {
 
 .current-temperature-icon {
     position: relative;
-    top: -8px;
-    font-size: 40px;
-    margin-right: 10px;
+    top: 9px;
+    margin-right: -1px;
 }
 
 .current-temperature-value {
     font-size: 80px;
     font-weight: bold;
     font-family: "lexend";
+
 }
 
 .current-temperature-unit {
