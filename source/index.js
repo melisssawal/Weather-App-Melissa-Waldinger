@@ -1,16 +1,21 @@
-function showTemp(response) {
+   
+    
+    function showTemp(response) {
     let temp = Math.round(response.data.temperature.current);
     let description = `${response.data.condition.description}`;
-    
     let focusTemperature = document.querySelector("#current-digit-temperature");
-    focusTemperature.innerHTML = `${temp}`;
-    
     let focusCity = document.querySelector("#current-city");
-    focusCity.innerHTML = response.data.city;
-    
     let focusTempDescription = document.querySelector("#temp-description");
+    let focusHumidity = document.querySelector("#humidity-value");
+    let focusWindSpeed = document.querySelector("#windspeed-value");
+    let focusIcon = document.querySelector("#temp-icon");
+
+    focusTemperature.innerHTML = `${temp}`;
+    focusCity.innerHTML = response.data.city;
     focusTempDescription.innerHTML = `${description}`;
-    
+    focusHumidity.innerHTML = `${response.data.temperature.humidity}%`;
+    focusWindSpeed.innerHTML = `${response.data.wind.speed}km/h`;
+    focusIcon.innerHTML = `<img src="${response.data.condition.icon_url} />`;
     }
     
     
@@ -23,7 +28,10 @@ function showTemp(response) {
     
     axios.get(apiUrl).then(showTemp);
     };  
-    
+
+     
+
+
     let form = document.querySelector("#search-form");
     form.addEventListener("submit", searchCity);
     
