@@ -16,6 +16,7 @@
     focusHumidity.innerHTML = `${response.data.temperature.humidity}%`;
     focusWindSpeed.innerHTML = `${response.data.wind.speed}km/h`;
     focusIcon.innerHTML = `<img src="${response.data.condition.icon_url} />`;
+   
     }
     
     
@@ -30,8 +31,6 @@
     };  
 
      
-
-
     let form = document.querySelector("#search-form");
     form.addEventListener("submit", searchCity);
     
