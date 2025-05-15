@@ -5,7 +5,7 @@ body {
 }
 
 a {
-    color: #885df1;
+    color: rgb(93, 29, 105);
 }
 
 .weather-app {
@@ -49,6 +49,16 @@ main {
     padding: 30px 0;
 }
 
+#humidity-value {
+    color: rgb(93, 29, 105);
+    font-weight: 700;
+}
+
+#windspeed-value {
+    color: rgb(93, 29, 105);
+    font-weight: 700;
+
+}
 .current-temperature {
     font-size: 48px;
 }
@@ -100,6 +110,6 @@ footer {
     border-top: 1px solid #f9f7fe;
     text-align: center;
     padding-top: 15px;
-font-size: 14px;
+    font-size: 12px;
     color: rgba(39, 33, 66, 0.4);
 }
