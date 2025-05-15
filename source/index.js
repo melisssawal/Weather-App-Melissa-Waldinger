@@ -1,0 +1,63 @@
+function showTemp(response) {
+    let temp = Math.round(response.data.temperature.current);
+    let description = `${response.data.condition.description}`;
+    
+    let focusTemperature = document.querySelector("#current-digit-temperature");
+    focusTemperature.innerHTML = `${temp}`;
+    
+    let focusCity = document.querySelector("#current-city");
+    focusCity.innerHTML = response.data.city;
+    
+    let focusTempDescription = document.querySelector("#temp-description");
+    focusTempDescription.innerHTML = `${description}`;
+    
+    }
+    
+    
+    function searchCity(event) {
+      event.preventDefault();
+    let searchInput = document.querySelector("#search-text-input");
+    let city = searchInput.value;
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=34d34bfd03ebff0892b49ada97eo706t&unit=metric`;
+    
+    
+    axios.get(apiUrl).then(showTemp);
+    };  
+    
+    let form = document.querySelector("#search-form");
+    form.addEventListener("submit", searchCity);
+    
+    
+    
+    
+    function formatDate(date) {
+      let minutes = date.getMinutes();
+      let hours = date.getHours();
+      let day = date.getDay();
+    
+      if (minutes < 10) {
+        minutes = `0${minutes}`;
+      }
+    
+      if (hours < 10) {
+        hours = `0${hours}`;
+      }
+    
+      let days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ];
+    
+      let formattedDay = days[day];
+      return `${formattedDay} ${hours}:${minutes}`;
+    }
+    
+    let currentDateELement = document.querySelector("#current-date");
+    let currentDate = new Date();
+    
+    currentDateELement.innerHTML = formatDate(currentDate);

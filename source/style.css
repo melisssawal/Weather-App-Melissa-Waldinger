@@ -1,5 +1,6 @@
 body {
     background: linear-gradient(182deg, rgb(176, 197, 232) 0%, rgb(82, 99, 128) 100%);
+    background-attachment: fixed;
     font-family: "quicksand", sans-serif;
 }
 
