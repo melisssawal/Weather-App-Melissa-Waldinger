@@ -55,6 +55,11 @@ main {
     padding: 30px 0;
 }
 
+.temp-today-text {
+    color: rgba(39, 33, 66, 0.4);
+    font-weight: bold;
+}
+
 #humidity-value {
     color: #8d6c9c;
     font-weight: 700;
@@ -78,14 +83,16 @@ main {
     font-size: 38px;
     font-weight: 900;
     margin: 0;
+    margin-top: 10px;
     font-family: "lexend";
 }
 
 .current-details {
     color: rgba(39, 33, 66, 0.4);
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 24px;
+
 }
 
 .current-details strong {
@@ -110,6 +117,41 @@ main {
     position: relative;
     top: -38px;
     font-family: "lexend";
+}
+
+.weather-forecast {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.weather-forecast-date {
+    text-align: center;
+    color: rgba(39, 33, 66, 0.4);
+    line-height: 24px;
+    font-size: 16px;
+}
+
+.weather-forecast-icon {
+    text-align: center;
+    padding: 5px;
+}
+
+.weather-forecast-temps {
+     text-align: center; 
+     padding: 5px;
+     font-size: 16px;
+
+}
+
+.weather-forecast-high-temp {
+    color: #a981bb;
+    font-weight: bold;
+}
+
+.weather-forecast-low-temp {
+        color: rgb(169, 129, 187, 0.4);
+        font-weight: bold;
 }
 
 footer {
