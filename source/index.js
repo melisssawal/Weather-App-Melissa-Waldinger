@@ -34,9 +34,7 @@
     let form = document.querySelector("#search-form");
     form.addEventListener("submit", searchCity);
     
-    
-    
-    
+  
     function formatDate(date) {
       let minutes = date.getMinutes();
       let hours = date.getHours();
@@ -68,3 +66,31 @@
     let currentDate = new Date();
     
     currentDateELement.innerHTML = formatDate(currentDate);
+
+   function displayForecast () {
+   
+
+    let day = ["Tue", "Wed", "Thur", "Fri", "Sat"];
+    let forecastHtml = "";
+
+    day.forEach ( function (day) {
+
+    forecastHtml +=  `
+    <div class="weather-forecast-day">
+            <div class="weather-forecast-date">${day}</div>  
+          <div class="weather-forecast-icon">⛅</div> 
+          <div class="weather-forecast-temps"
+          >
+          <span class="weather-forecast-high-temp"> 15&deg;</span>
+            <span class="weather-forecast-low-temp">9&deg; </span> 
+          </div>
+        </div>
+    `;
+    }); 
+    
+    let forecastElement = document.querySelector("#forecast");
+    forecastElement.innerHTML = forecastHtml;
+   }
+
+   
+   displayForecast ();
