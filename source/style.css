@@ -131,8 +131,10 @@ main {
 }
 
 .weather-forecast-icon {
-    text-align: center;
-    padding: 5px;
+    display: block;
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
 }
 
 .weather-forecast-temps {
