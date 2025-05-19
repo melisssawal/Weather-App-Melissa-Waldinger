@@ -17,6 +17,7 @@
     focusWindSpeed.innerHTML = `${response.data.wind.speed}km/h`;
     focusIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class ="current-temperature-icon" />`;
    
+    getForecast(response.data.city)
     }
     
     
@@ -67,8 +68,16 @@
     
     currentDateELement.innerHTML = formatDate(currentDate);
 
-   function displayForecast () {
-   
+function getForecast (city) {
+  let apiKey = "34d34bfd03ebff0892b49ada97eo706t";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`
+  axios(apiUrl).then(displayForecast);
+  console.log(apiUrl);
+}
+
+
+   function displayForecast (response) {
+console.log(response.data);
 
     let day = ["Tue", "Wed", "Thur", "Fri", "Sat"];
     let forecastHtml = "";
